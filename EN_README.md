@@ -1,5 +1,9 @@
 # 🧩 PyLibKit Landing
 
+[KO](https://github.com/PylibKit/Landing/blob/main/README.md)
+[EN](https://github.com/PylibKit/Landing/blob/main/EN_README.md)
+[JP](https://github.com/PylibKit/Landing/blob/main/JP_README.md)
+
 **A macOS development kit for seamless Swift ↔ Python integration**
 
 PyLibKit enables macOS developers to **run and manage Python code directly within Swift applications**.  

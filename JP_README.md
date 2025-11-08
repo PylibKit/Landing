@@ -1,5 +1,9 @@
 # 🧩 PyLibKit Landing
 
+[KO](https://github.com/PylibKit/Landing/blob/main/README.md)
+[EN](https://github.com/PylibKit/Landing/blob/main/EN_README.md)
+[JP](https://github.com/PylibKit/Landing/blob/main/JP_README.md)
+
 **Swift ↔ Python を完全統合するための macOS 開発キット**
 
 PyLibKit は、macOS 環境で **Swift アプリ内で直接 Python コードを実行・管理** できるようにする統合開発キットです。  
