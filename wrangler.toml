@@ -1,0 +1,9 @@
+name = "pylibkit-landing"
+main = ".open-next/worker/index.js"
+
+compatibility_date = "2025-11-16"
+
+workers_dev = true
+
+[vars]
+NODE_ENV = "production"
