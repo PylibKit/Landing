@@ -50,16 +50,18 @@ export function StickyFooter() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <ul className="space-y-2">
-                <li
-                  className="hover:underline cursor-pointer transition-colors"
-                  style={{ color: "#121113" }}
-                  onMouseEnter={(e) =>
-                    (e.target.style.color = "rgba(18, 17, 19, 0.8)")
-                  }
-                  onMouseLeave={(e) => (e.target.style.color = "#121113")}
-                >
-                  Home
-                </li>
+                <a href="/">
+                  <li
+                    className="hover:underline cursor-pointer transition-colors"
+                    style={{ color: "#121113" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "rgba(18, 17, 19, 0.8)")
+                    }
+                    onMouseLeave={(e) => (e.target.style.color = "#121113")}
+                  >
+                    Home
+                  </li>
+                </a>
                 <li
                   className="hover:underline cursor-pointer transition-colors"
                   style={{ color: "#121113" }}
@@ -70,6 +72,30 @@ export function StickyFooter() {
                 >
                   Docs
                 </li>
+                <a href="/terms">
+                  <li
+                    className="hover:underline cursor-pointer transition-colors"
+                    style={{ color: "#121113" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "rgba(18, 17, 19, 0.8)")
+                    }
+                    onMouseLeave={(e) => (e.target.style.color = "#121113")}
+                  >
+                    Terms
+                  </li>
+                </a>
+                <a href="/privacy">
+                  <li
+                    className="hover:underline cursor-pointer transition-colors"
+                    style={{ color: "#121113" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "rgba(18, 17, 19, 0.8)")
+                    }
+                    onMouseLeave={(e) => (e.target.style.color = "#121113")}
+                  >
+                    Privacy
+                  </li>
+                </a>
               </ul>
               <ul className="space-y-2">
                 <a
