@@ -1,32 +1,32 @@
-"use client"
-import { motion, AnimatePresence } from "framer-motion"
-import { useState, useEffect } from "react"
+"use client";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export function StickyFooter() {
-  const [isAtBottom, setIsAtBottom] = useState(false)
+  const [isAtBottom, setIsAtBottom] = useState(false);
 
   useEffect(() => {
-    let ticking = false
+    let ticking = false;
 
     const handleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
-          const scrollTop = window.scrollY
-          const windowHeight = window.innerHeight
-          const documentHeight = document.documentElement.scrollHeight
-          const isNearBottom = scrollTop + windowHeight >= documentHeight - 100
+          const scrollTop = window.scrollY;
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+          const isNearBottom = scrollTop + windowHeight >= documentHeight - 100;
 
-          setIsAtBottom(isNearBottom)
-          ticking = false
-        })
-        ticking = true
+          setIsAtBottom(isNearBottom);
+          ticking = false;
+        });
+        ticking = true;
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    handleScroll() // Check initial state
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Check initial state
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -53,7 +53,9 @@ export function StickyFooter() {
                 <li
                   className="hover:underline cursor-pointer transition-colors"
                   style={{ color: "#121113" }}
-                  onMouseEnter={(e) => (e.target.style.color = "rgba(18, 17, 19, 0.8)")}
+                  onMouseEnter={(e) =>
+                    (e.target.style.color = "rgba(18, 17, 19, 0.8)")
+                  }
                   onMouseLeave={(e) => (e.target.style.color = "#121113")}
                 >
                   Home
@@ -61,59 +63,44 @@ export function StickyFooter() {
                 <li
                   className="hover:underline cursor-pointer transition-colors"
                   style={{ color: "#121113" }}
-                  onMouseEnter={(e) => (e.target.style.color = "rgba(18, 17, 19, 0.8)")}
+                  onMouseEnter={(e) =>
+                    (e.target.style.color = "rgba(18, 17, 19, 0.8)")
+                  }
                   onMouseLeave={(e) => (e.target.style.color = "#121113")}
                 >
                   Docs
                 </li>
-                <li
-                  className="hover:underline cursor-pointer transition-colors"
-                  style={{ color: "#121113" }}
-                  onMouseEnter={(e) => (e.target.style.color = "rgba(18, 17, 19, 0.8)")}
-                  onMouseLeave={(e) => (e.target.style.color = "#121113")}
-                >
-                  Components
-                </li>
               </ul>
               <ul className="space-y-2">
-                <li
-                  className="hover:underline cursor-pointer transition-colors"
-                  style={{ color: "#121113" }}
-                  onMouseEnter={(e) => (e.target.style.color = "rgba(18, 17, 19, 0.8)")}
-                  onMouseLeave={(e) => (e.target.style.color = "#121113")}
+                <a
+                  href="https://github.com/PylibKit/Landing.git"
+                  target="_blank"
                 >
-                  Github
-                </li>
-                <li
-                  className="hover:underline cursor-pointer transition-colors"
-                  style={{ color: "#121113" }}
-                  onMouseEnter={(e) => (e.target.style.color = "rgba(18, 17, 19, 0.8)")}
-                  onMouseLeave={(e) => (e.target.style.color = "#121113")}
-                >
-                  Twitter
-                </li>
-                <li
-                  className="hover:underline cursor-pointer transition-colors"
-                  style={{ color: "#121113" }}
-                  onMouseEnter={(e) => (e.target.style.color = "rgba(18, 17, 19, 0.8)")}
-                  onMouseLeave={(e) => (e.target.style.color = "#121113")}
-                >
-                  Discord
-                </li>
+                  <li
+                    className="hover:underline cursor-pointer transition-colors"
+                    style={{ color: "#121113" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "rgba(18, 17, 19, 0.8)")
+                    }
+                    onMouseLeave={(e) => (e.target.style.color = "#121113")}
+                  >
+                    Github
+                  </li>
+                </a>
               </ul>
             </motion.div>
             <motion.h2
-              className="absolute bottom-0 left-0 translate-y-1/3 sm:text-[192px] text-[80px] font-bold select-none"
+              className="absolute top-2 left-0 translate-y-1/3 sm:text-[192px] text-[80px] font-bold select-none"
               style={{ color: "#121113" }}
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              v0
+              Pylibkit
             </motion.h2>
           </div>
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
 }

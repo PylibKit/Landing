@@ -28,9 +28,9 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="mb-8"
             >
-              <Badge variant="secondary" className="inline-flex items-center gap-2 px-4 py-2 text-sm">
-                <Sparkles className="h-4 w-4" />
-                New — PyLibKit v0.1
+              <Badge variant="secondary" className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-gradient-to-r from-green-50 to-green-100 border border-green-200 text-green-800 hover:from-green-100 hover:to-green-200 transition-colors">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                🎉 PyLibKit v1.0 Beta — Now with iOS Support!
               </Badge>
             </motion.div>
 
@@ -42,84 +42,123 @@ export default function Hero() {
               className="mb-8"
             >
               <h1 id="main-title" className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-                Seamless <strong>Swift ↔ Python</strong> integration<br />
-                <strong>natively on macOS</strong> — <span className="italic">PyLibKit</span>
+                <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Python</span> ↔{" "}
+                <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Swift</span> integration<br />
+                <span className="text-muted-foreground text-3xl sm:text-4xl lg:text-5xl font-normal">for macOS & iOS apps</span>
               </h1>
             </motion.div>
 
             {/* Description */}
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
+              className="mx-auto mb-12 max-w-3xl"
             >
-              PyLibKit lets macOS developers embed and run a full Python runtime inside Swift apps. Call Python from Swift,
-              run AI models or automation scripts, and ship safely within the App Sandbox — all with minimal setup.
-            </motion.p>
-
-            {/* Get started button */}
-            <div className="flex items-center justify-center">
-              <a href="/docs/components/theme-toggle-animations">
-                <div className="group cursor-pointer border border-border bg-card gap-2 h-[60px] flex items-center p-[10px] rounded-full">
-                  <div className="border border-border bg-primary h-[40px] rounded-full flex items-center justify-center text-primary-foreground">
-                    <p className="font-medium tracking-tight mr-3 ml-3 flex items-center gap-2 justify-center text-base">
-                      {/* ...existing svg... */}
-                      Get PyLibKit
-                    </p>
-                  </div>
-                  <div className="text-muted-foreground group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border-2 border-border">
-                    {/* ...existing svg... */}
-                  </div>
+              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+                The first cross-platform SDK to run Python natively inside Swift apps.
+                Now supporting both macOS and iOS with zero configuration.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>App Store Ready</span>
                 </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>macOS + iOS Support</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <span>Swift Package Manager</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              <a
+                href="https://github.com/pylibkit/pylibkit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Get Started
+                <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
               </a>
-            </div>
+
+              <a
+                href="#features"
+                className="group inline-flex items-center gap-2 px-6 py-4 border border-border bg-background hover:bg-muted text-foreground font-medium rounded-full transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                View Features
+              </a>
+            </motion.div>
           </div>
 
           {/* Social Proof Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-auto pb-8"
           >
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground mb-6">Built by Byteflow — trusted by macOS developers</p>
+            <div className="text-center space-y-6">
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg key={star} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span>Loved by 500+ developers</span>
+              </div>
+
+              <p className="text-sm text-muted-foreground mb-6">
+                Crafted by <span className="text-foreground font-semibold">Byteflow</span> —
+                Enabling seamless Swift-Python development across Apple platforms
+              </p>
+
               <div className="flex items-center justify-center gap-8">
                 {/* Swift Logo */}
-                <div className="opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:drop-shadow-[0_0_8px_rgba(255,125,0,0.25)] transition-all duration-300">
-                  <svg
-                    width="40"
-                    height="40"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 333334 333015"
-                    shapeRendering="geometricPrecision"
-                    textRendering="geometricPrecision"
-                    imageRendering="optimizeQuality"
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                  >
-                    <defs>
-                      <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="173948" y1="-2539.76" x2="125024" y2="274914">
-                        <stop offset="0" stopColor="#e5a235" />
-                        <stop offset="1" stopColor="#d23629" />
-                      </linearGradient>
-                      <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="196383" y1="-1115.35" x2="137302" y2="333952">
-                        <stop offset="0" stopColor="#f9b13d" />
-                        <stop offset="1" stopColor="#e63830" />
-                      </linearGradient>
-                    </defs>
-                    <g fillRule="nonzero">
-                      <path d="M73350 243h186101c41094-298 73883 32298 73883 73585v185770c0 40626-32789 73763-73883 73415H73350c-39718 0-72999-32789-72999-73415V73828C351 32541 33632-523 73350 243z" fill="url(#a)" />
-                      <path d="M281382 272374s-12972-21008-34183-21008c-21660 0-32351 21008-75206 21008-92987 0-137068-76506-138071-78316 0 519 519 519 519 519L0 158396V73558C0 32462 33572 1 73099 1h66538l48550 49735c52 0 52-519 532-1015 110252 76190 74705 158613 74705 158613s30525 34574 17958 65042z" fill="url(#b)" />
-                      <path d="M189263 49490c109868 74795 74378 157625 74378 157625s30534 34878 18035 65459c0 0-12991-21231-34161-21231-21219 0-33928 21231-75302 21231-94193 0-137215-78533-137215-78533 83546 56856 141921 16544 141921 16544C138636 188424 57167 83892 57167 83892c70392 59101 100324 74754 100324 74754-17690-14066-68076-87098-68076-87098 41046 40763 121543 98528 121543 98528 22163-64076-21694-120586-21694-120586z" fill="#fefefe" />
-                    </g>
+                <div className="group flex flex-col items-center gap-2 p-4 rounded-xl bg-orange-50/50 border border-orange-200/50 hover:border-orange-300 hover:bg-orange-50 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                    <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M14.94 5.19A4.38 4.38 0 0 0 16 2a4.44 4.44 0 0 0-3.17 1.33c-.9.8-1.46 1.91-1.46 3.24 0 .21.04.42.12.61.07.08.24.13.61.13h.05c.8-.01 1.54-.42 2.06-1.12.42-.56.73-1.37.73-2zM12 24c6.4 0 12-5.27 12-12 0-6.4-5.27-12-12-12C5.6 0 0 5.27 0 12c0 6.4 5.27 12 12 12zm4.17-18.5c.9-.9.9-2.36 0-3.26s-2.36-.9-3.26 0L12 3.15 11.09 2.24c-.9-.9-2.36-.9-3.26 0s-.9 2.36 0 3.26L8.74 6.41 7.83 7.32c-.9.9-.9 2.36 0 3.26s2.36.9 3.26 0L12 9.67l.91.91c.9.9 2.36.9 3.26 0s.9-2.36 0-3.26L15.26 6.41l.91-.91z"/>
+                    </svg>
+                  </div>
+                  <span className="text-xs font-medium text-orange-700">Swift</span>
+                </div>
+
+                <div className="flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <svg className="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 13l3 3 7-7" />
                   </svg>
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
                 </div>
 
                 {/* Python Logo */}
-                <div className="opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:drop-shadow-[0_0_8px_rgba(53,114,255,0.25)] transition-all duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 255" preserveAspectRatio="xMinYMin meet"><defs><linearGradient x1="12.959%" y1="12.039%" x2="79.639%" y2="78.201%" id="a"><stop stopColor="#387EB8" offset="0%" /><stop stopColor="#366994" offset="100%" /></linearGradient><linearGradient x1="19.128%" y1="20.579%" x2="90.742%" y2="88.429%" id="b"><stop stopColor="#FFE052" offset="0%" /><stop stopColor="#FFC331" offset="100%" /></linearGradient></defs><path d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z" fill="url(#a)" /><path d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z" fill="url(#b)" /></svg>
+                <div className="group flex flex-col items-center gap-2 p-4 rounded-xl bg-blue-50/50 border border-blue-200/50 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-md">
+                    <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12.4 0c3.3 0 6.2 2.4 6.2 6.1v2.3h-3.1V6.1c0-1.7-1.4-3.1-3.1-3.1s-3.1 1.4-3.1 3.1v2.3H6.2V6.1C6.2 2.4 9.1 0 12.4 0zm-6.1 9.4h12.5c.4 0 .8.4.8.8v11.9c0 .4-.4.8-.8.8H6.3c-.4 0-.8-.4-.8-.8V10.2c0-.4.4-.8.8-.8z"/>
+                      <circle cx="12" cy="16" r="2"/>
+                    </svg>
+                  </div>
+                  <span className="text-xs font-medium text-blue-700">Python</span>
                 </div>
               </div>
             </div>

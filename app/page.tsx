@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import Hero from "@/components/home/hero"
 import Features from "@/components/features"
-import { TestimonialsSection } from "@/components/testimonials"
+// import { TestimonialsSection } from "@/components/testimonials"
 import { NewReleasePromo } from "@/components/new-release-promo"
 import { FAQSection } from "@/components/faq-section"
 import { PricingSection } from "@/components/pricing-section"
@@ -70,20 +70,11 @@ export default function Home() {
           className={`z-50 flex items-center justify-center gap-2 transition-all duration-300 ${
             isScrolled ? "ml-4" : ""
           }`}
-          href="https://v0.app"
+          href="https://pylibkit.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <svg
-            fill="currentColor"
-            viewBox="0 0 147 70"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            className="text-foreground rounded-full size-8 w-8"
-          >
-            <path d="M56 50.2031V14H70V60.1562C70 65.5928 65.5928 70 60.1562 70C57.5605 70 54.9982 68.9992 53.1562 67.1573L0 14H19.7969L56 50.2031Z"></path>
-            <path d="M147 56H133V23.9531L100.953 56H133V70H96.6875C85.8144 70 77 61.1856 77 50.3125V14H91V46.1562L123.156 14H91V0H127.312C138.186 0 147 8.81439 147 19.6875V56Z"></path>
-          </svg>
+          PylibKit
         </a>
 
         <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-muted-foreground transition duration-200 hover:text-foreground md:flex md:space-x-2">
@@ -125,7 +116,7 @@ export default function Home() {
           >
             <span className="relative z-20">Pricing</span>
           </a>
-          <a
+          {/* <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
@@ -143,7 +134,7 @@ export default function Home() {
             }}
           >
             <span className="relative z-20">Testimonials</span>
-          </a>
+          </a> */}
           <a
             className="relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
             onClick={(e) => {
@@ -238,12 +229,12 @@ export default function Home() {
               >
                 Pricing
               </button>
-              <button
+              {/* <button
                 onClick={() => handleMobileNavClick("testimonials")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
               >
                 Testimonials
-              </button>
+              </button> */}
               <button
                 onClick={() => handleMobileNavClick("faq")}
                 className="text-left px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50"
@@ -283,9 +274,9 @@ export default function Home() {
       </div>
 
       {/* Testimonials Section */}
-      <div id="testimonials">
+      {/* <div id="testimonials">
         <TestimonialsSection />
-      </div>
+      </div> */}
 
       <NewReleasePromo />
 

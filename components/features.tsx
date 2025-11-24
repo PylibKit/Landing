@@ -50,14 +50,27 @@ export default function Features() {
         transition={{ duration: 0.5, delay: 0 }}
         className="container mx-auto flex flex-col items-center gap-6 sm:gap-12"
       >
-        <h2
-          className={cn(
-            "via-foreground mb-8 bg-gradient-to-b from-zinc-800 to-zinc-700 bg-clip-text text-center text-4xl font-semibold tracking-tighter text-transparent md:text-[54px] md:leading-[60px]",
-            geist.className,
-          )}
-        >
-          Features
-        </h2>
+        <div className="text-center mb-8">
+          <div className="border-primary/40 text-primary inline-flex items-center gap-2 rounded-full border px-3 py-1 uppercase mb-4">
+            <span>⚡</span>
+            <span className="text-sm">Core Features</span>
+          </div>
+          <h2
+            className={cn(
+              "via-foreground bg-gradient-to-b from-zinc-800 to-zinc-700 bg-clip-text text-center text-4xl font-semibold tracking-tighter text-transparent md:text-[54px] md:leading-[60px]",
+              geist.className,
+            )}
+          >
+            Cross-Platform Swift ↔ Python{" "}
+            <span className="bg-gradient-to-b from-foreground via-orange-200 to-primary bg-clip-text text-transparent">
+              Integration
+            </span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            PyLibKit bridges Swift and Python across all Apple platforms,
+            enabling seamless integration for both macOS and iOS development.
+          </p>
+        </div>
         <FollowerPointerCard
           title={
             <div className="flex items-center gap-2">
@@ -85,10 +98,17 @@ export default function Features() {
                 style={{ transition: "all 0s ease-in-out" }}
               >
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl leading-none font-semibold tracking-tight">CLI & Manual Support</h3>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-orange-500/10 border border-orange-500/20">
+                      <svg className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl leading-none font-semibold tracking-tight">Native Python Runtime</h3>
+                  </div>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Integrate your landing page directly in the product while using your favorite tools.
+                      Embed a full Python interpreter directly into your Swift app. No external dependencies, no subprocess overhead — just pure native integration.
                     </p>
                   </div>
                 </div>
@@ -160,12 +180,12 @@ export default function Features() {
                     {/* Main Content Container with Staggered Animations */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="flex items-center gap-8">
-                        {/* Left Column */}
+                        {/* Left Column - Swift Features */}
                         <div className="flex flex-col gap-3">
-                          {["Feature-1", "Feature-1", "Feature-1"].map((item, index) => (
+                          {["Swift Classes", "Memory Safe", "High Performance"].map((item, index) => (
                             <motion.div
                               key={`left-${index}`}
-                              className="bg-white rounded px-3 py-2 flex items-center gap-2 text-black text-sm font-medium shadow-sm"
+                              className="bg-gradient-to-r from-orange-50 to-orange-100 rounded px-3 py-2 flex items-center gap-2 text-orange-900 text-sm font-medium shadow-sm border border-orange-200"
                               initial={{ opacity: 1, x: 0 }}
                               animate={isCliHovering ? { x: [-20, 0] } : { x: 0 }}
                               transition={{
@@ -175,36 +195,32 @@ export default function Features() {
                               whileHover={{ scale: 1.05 }}
                             >
                               <div className="w-4 h-4 flex items-center justify-center">
-                                {index === 0 && <span className="text-xs">📄</span>}
-                                {index === 1 && <span className="text-xs">💰</span>}
-                                {index === 2 && <span className="text-xs">🏢</span>}
+                                {index === 0 && <span className="text-xs">🏗️</span>}
+                                {index === 1 && <span className="text-xs">🛡️</span>}
+                                {index === 2 && <span className="text-xs">⚡</span>}
                               </div>
                               {item}
                             </motion.div>
                           ))}
                         </div>
 
-                        {/* Center Logo */}
+                        {/* Center PyLibKit Logo */}
                         <motion.div
-                          className="w-16 h-16 border border-gray-300 rounded-lg overflow-hidden shadow-lg"
+                          className="w-16 h-16 border border-orange-300 rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center"
                           initial={{ opacity: 1, scale: 1 }}
                           animate={isCliHovering ? { scale: [1, 1.1, 1] } : { scale: 1 }}
                           transition={{ duration: 0.6, ease: "easeOut" }}
                           whileHover={{ scale: 1.1, rotate: 5 }}
                         >
-                          <img
-                            src="https://framerusercontent.com/images/q43ivjLz67lXhWf6TKfLIh0FY.png"
-                            alt="Logo"
-                            className="w-full h-full object-cover"
-                          />
+                          <div className="text-white font-bold text-lg">PK</div>
                         </motion.div>
 
-                        {/* Right Column */}
+                        {/* Right Column - Python Features */}
                         <div className="flex flex-col gap-3">
-                          {["Feature-1", "Feature-1", "Feature-1"].map((item, index) => (
+                          {["Python Libraries", "Data Processing", "Automation"].map((item, index) => (
                             <motion.div
                               key={`right-${index}`}
-                              className="bg-white rounded px-3 py-2 flex items-center gap-2 text-black text-sm font-medium shadow-sm"
+                              className="bg-gradient-to-r from-blue-50 to-blue-100 rounded px-3 py-2 flex items-center gap-2 text-blue-900 text-sm font-medium shadow-sm border border-blue-200"
                               initial={{ opacity: 1, x: 0 }}
                               animate={isCliHovering ? { x: [20, 0] } : { x: 0 }}
                               transition={{
@@ -214,9 +230,9 @@ export default function Features() {
                               whileHover={{ scale: 1.05 }}
                             >
                               <div className="w-4 h-4 flex items-center justify-center">
-                                {index === 0 && <span className="text-xs">👥</span>}
-                                {index === 1 && <span className="text-xs">💳</span>}
-                                {index === 2 && <span className="text-xs">👨‍⚕️</span>}
+                                {index === 0 && <span className="text-xs">📚</span>}
+                                {index === 1 && <span className="text-xs">📊</span>}
+                                {index === 2 && <span className="text-xs">⚙️</span>}
                               </div>
                               {item}
                             </motion.div>
@@ -273,11 +289,18 @@ export default function Features() {
                 style={{ transition: "all 0s ease-in-out" }}
               >
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl leading-none font-semibold tracking-tight">Globally Usable</h3>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                      <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl leading-none font-semibold tracking-tight">Cross-Platform Bridge</h3>
+                  </div>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Blocks are available everywhere but ours are the best. Use them in your favorite framework or even
-                      in plain HTML.
+                      Seamlessly call Python functions from Swift with automatic type conversion.
+                      Now available on both macOS and iOS platforms.
                     </p>
                   </div>
                 </div>
@@ -285,7 +308,7 @@ export default function Features() {
                   <h1 className="mt-8 text-center text-5xl leading-[100%] font-semibold sm:leading-normal lg:mt-12 lg:text-6xl">
                     <span className='bg-background relative mt-3 inline-block w-fit rounded-md border px-1.5 py-0.5 before:absolute before:top-0 before:left-0 before:z-10 before:h-full before:w-full before:bg-[url("/noise.gif")] before:opacity-[0.09] before:content-[""]'>
                       <ScrambleHover
-                        text="feature-2"
+                        text="Swift⟷Python"
                         scrambleSpeed={70}
                         maxIterations={20}
                         useOriginalCharsOnly={false}
@@ -330,10 +353,17 @@ export default function Features() {
                 style={{ transition: "all 0s ease-in-out" }}
               >
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl leading-none font-semibold tracking-tight">Smart Components</h3>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-green-500/10 border border-green-500/20">
+                      <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl leading-none font-semibold tracking-tight">Sandbox Compatible</h3>
+                  </div>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Intelligent components that adapt to your needs with built-in animations and interactions.
+                      Designed to work within both macOS and iOS App Sandbox restrictions. Ship to the App Store with confidence while maintaining full Python functionality.
                     </p>
                   </div>
                 </div>
@@ -343,7 +373,7 @@ export default function Features() {
                       <div className="p-4">
                         <textarea
                           className="w-full min-h-[100px] bg-transparent border-none text-white placeholder:text-white/50 resize-none focus:outline-none text-base leading-relaxed"
-                          placeholder="Search the web..."
+                          placeholder="// Import PyLibKit in Swift&#10;import PyLibKit&#10;&#10;// Call Python from Swift&#10;let result = pylib.call(&quot;numpy.array&quot;, [1, 2, 3])&#10;print(result)"
                           value={inputValue}
                           onChange={(e) => setInputValue(e.target.value)}
                           onKeyDown={handleKeyDown}
@@ -379,11 +409,9 @@ export default function Features() {
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             >
-                              <circle cx="12" cy="12" r="10"></circle>
-                              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                              <path d="M2 12h20"></path>
+                              <polygon points="14,6 10,12 14,18"></polygon>
                             </svg>
-                            Search
+                            Execute
                           </button>
                         </div>
                         <button className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
@@ -426,21 +454,52 @@ export default function Features() {
                 style={{ transition: "all 0s ease-in-out" }}
               >
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl leading-none font-semibold tracking-tight">Dynamic Layouts</h3>
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20">
+                      <svg className="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl leading-none font-semibold tracking-tight">High Performance</h3>
+                  </div>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Responsive layouts that transform and adapt seamlessly across all device sizes.
+                      Optimized for minimal overhead with in-process Python execution. Perfect for real-time data processing and automation tasks.
                     </p>
                   </div>
                 </div>
                 <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
-                  <div className="relative w-full max-w-sm">
-                    <img
-                      src="/modern-grid-layout.png"
-                      alt="Dynamic Layout Example"
-                      className="w-full h-auto rounded-lg shadow-lg"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                  <div className="w-full max-w-lg space-y-4">
+                    {/* Performance Metrics */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-lg p-4 text-center">
+                        <div className="text-2xl font-bold text-purple-900">~0ms</div>
+                        <div className="text-sm text-purple-600">IPC Overhead</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-lg p-4 text-center">
+                        <div className="text-2xl font-bold text-green-900">Native</div>
+                        <div className="text-sm text-green-600">Speed</div>
+                      </div>
+                    </div>
+
+                    {/* Performance Chart Simulation */}
+                    <div className="bg-gray-900 rounded-lg p-4 space-y-2">
+                      <div className="text-white text-sm">PyLibKit Performance</div>
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-2">
+                          <div className="text-green-400 text-xs w-16">Swift</div>
+                          <div className="bg-green-400 h-2 rounded" style={{width: '95%'}}></div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="text-purple-400 text-xs w-16">PyLibKit</div>
+                          <div className="bg-purple-400 h-2 rounded" style={{width: '88%'}}></div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="text-orange-400 text-xs w-16">Subprocess</div>
+                          <div className="bg-orange-400 h-2 rounded" style={{width: '45%'}}></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>

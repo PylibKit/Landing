@@ -5,9 +5,35 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "PyLibKit - Swift ↔ Python Integration for iOS & macOS",
+  description: "PyLibKit v1.0 Beta: The first cross-platform SDK to run Python natively inside Swift apps. Now supporting both iOS and macOS with zero configuration - perfect for automation, data processing, and more.",
+  keywords: ["Swift", "Python", "iOS", "macOS", "SDK", "Integration", "Automation", "App Development", "Native", "Runtime", "Cross-Platform"],
+  publisher: "PyLibKit",
+  metadataBase: new URL("https://pylibkit.org"),
+  openGraph: {
+    title: "PyLibKit v1.0 - Swift ↔ Python Integration for iOS & macOS",
+    description: "The first cross-platform SDK to run Python natively in Swift apps. Now supporting iPhone, iPad, and Mac with the same codebase.",
+    url: "https://pylibkit.org",
+    siteName: "PyLibKit",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PyLibKit v1.0 - Swift ↔ Python Integration for iOS & macOS",
+    description: "The first cross-platform SDK to run Python natively in Swift apps. Now supporting iPhone, iPad, and Mac with the same codebase.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function RootLayout({

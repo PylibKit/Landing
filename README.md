@@ -1,8 +1,8 @@
 # 🧩 PyLibKit Landing
 
 [KO](https://github.com/PylibKit/Landing/blob/main/README.md)
-[EN](https://github.com/PylibKit/Landing/blob/main/EN_README.md)
-[JP](https://github.com/PylibKit/Landing/blob/main/JP_README.md)
+[EN](https://github.com/PylibKit/Landing/blob/main/README.en.md)
+[JP](https://github.com/PylibKit/Landing/blob/main/README.jp.md)
 
 **Swift ↔ Python 통합을 위한 macOS 개발 키트**
 
