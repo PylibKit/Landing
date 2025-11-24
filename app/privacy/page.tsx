@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
         <div className="prose prose-invert max-w-none">
           <h2>1. Purpose of Personal Information Processing</h2>
           <p>
-            PyLibKit ("Company") processes personal information for the following purposes.
+            Byteflow ("Company") processes personal information for the following purposes.
             Personal information being processed will not be used for purposes other than those stated below,
             and when the purpose of use changes, we will implement necessary measures such as obtaining separate consent
             in accordance with Article 18 of the Personal Information Protection Act.
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
             for personal information processing and to handle complaints and remedy damages related to personal information processing:
           </p>
           <ul>
-            <li>Personal Information Protection Officer: PyLibKit Development Team</li>
+            <li>Personal Information Protection Officer: Byteflow Development Team</li>
             <li>Contact: support@pylibkit.org</li>
           </ul>
 

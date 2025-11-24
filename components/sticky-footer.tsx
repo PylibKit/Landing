@@ -96,6 +96,18 @@ export function StickyFooter() {
                     Privacy
                   </li>
                 </a>
+                <a href="/refund">
+                  <li
+                    className="hover:underline cursor-pointer transition-colors"
+                    style={{ color: "#121113" }}
+                    onMouseEnter={(e) =>
+                      (e.target.style.color = "rgba(18, 17, 19, 0.8)")
+                    }
+                    onMouseLeave={(e) => (e.target.style.color = "#121113")}
+                  >
+                    Refund
+                  </li>
+                </a>
               </ul>
               <ul className="space-y-2">
                 <a

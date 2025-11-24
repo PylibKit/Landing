@@ -22,7 +22,7 @@ export default function TermsOfService() {
           <h2>1. Purpose</h2>
           <p>
             These Terms of Service ("Terms") govern your use of PyLibKit services ("Service")
-            provided by PyLibKit ("Company", "we", "us", or "our") and define the rights,
+            provided by Byteflow ("Company", "we", "us", or "our") and define the rights,
             obligations, and responsibilities between the Company and users.
           </p>
 
