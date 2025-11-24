@@ -1,13 +1,15 @@
 # 🧩 PyLibKit Landing
 
-[KO](https://github.com/PylibKit/Landing/blob/main/README.md)
-[EN](https://github.com/PylibKit/Landing/blob/main/EN_README.md)
-[JP](https://github.com/PylibKit/Landing/blob/main/JP_README.md)
+**Website**: [pylibkit.org](https://pylibkit.org)
 
-**Swift ↔ Python を完全統合するための macOS 開発キット**
+[KO](https://github.com/PylibKit/Landing/blob/main/README.md) |
+[EN](https://github.com/PylibKit/Landing/blob/main/README.en.md) |
+[JP](https://github.com/PylibKit/Landing/blob/main/README.jp.md)
 
-PyLibKit は、macOS 環境で **Swift アプリ内で直接 Python コードを実行・管理** できるようにする統合開発キットです。  
-Python の柔軟さと Swift の高性能を融合し、ハイブリッド型 macOS アプリをシンプルに構築できます。
+**Swift ↔ Python を完全統合するための iOS & macOS クロスプラットフォーム開発キット**
+
+PyLibKit は、iOS と macOS 環境で **Swift アプリ内で直接 Python コードを実行・管理** できるようにするクロスプラットフォーム開発キットです。
+Python の柔軟さと Swift の高性能を融合し、すべての Apple プラットフォームでハイブリッド型アプリをシンプルに構築できます。
 
 ---
 
@@ -22,26 +24,26 @@ Python の柔軟さと Swift の高性能を融合し、ハイブリッド型 ma
 - **サンドボックス対応**  
   macOS のサンドボックス環境でも安全に動作  
 
-- **クロスプラットフォーム対応予定**  
-  **iOS 環境でのサポート** を計画中（Pyodide / 組み込みインタプリタ / Swift-Python ブリッジ方式を検討）
+- **クロスプラットフォーム対応**
+  **iOS と macOS の両方をサポート** - iPhone、iPad、Mac で同じコードベースで Python を実行可能
 
 ---
 
 ## 🧠 PyLibKit を選ぶ理由
 
-これまで macOS で Python を利用するには、複雑な環境設定やパス管理が必要でした。  
-PyLibKit はその課題を解決し、**Swift アプリ内で直接 Python のエコシステムを活用** できるようにします。
+これまで iOS と macOS で Python を利用するには、複雑な環境設定やプラットフォーム制約が問題でした。
+PyLibKit はその課題を解決し、**すべての Apple プラットフォームの Swift アプリ内で直接 Python のエコシステムを活用** できるようにします。
 
-> AI モデルの推論、データ処理、自動化スクリプトを — すべて 1 つのアプリ内で実行。
+> データ処理、自動化スクリプト、ウェブスクレイピングを — すべて 1 つのアプリ内で実行。
 
 ---
 
 ## 💡 主な利用例
 
-- macOS アプリ内で **Python ベースの AI / ML モデル** を実行  
-- Python スクリプトを用いた **データ処理・自動化**  
-- Swift-Python 統合による **開発効率の向上**  
-- 将来的には **iOS 向け Python SDK プロトタイプ** も提供予定
+- iOS/macOS アプリ内で **Python ベースのデータ処理と自動化** を実行
+- Python スクリプトを用いた **ウェブスクレイピングと API 連携**
+- Swift-Python 統合による **開発効率の向上**
+- iPhone、iPad、Mac で動作する **ユニバーサルアプリ** の構築
 
 ---
 
@@ -50,16 +52,39 @@ PyLibKit はその課題を解決し、**Swift アプリ内で直接 Python の�
 | バージョン | ステータス | 説明 |
 |-------------|-------------|------|
 | v0.1 | ✅ リリース済み | macOS 統合の基本構造を完成 |
-| v0.2 | 🚧 開発中 | Swift-Python ブリッジ API の高度化 |
-| v0.3 | 🧪 計画中 | iOS 環境での初期サポート |
+| v0.2 | ✅ リリース済み | Swift-Python ブリッジ API の高度化 |
+| v1.0 Beta | 🎉 **提供開始** | **iOS + macOS クロスプラットフォーム対応** |
 | v1.0 | 🔜 近日公開予定 | PyLibKit SDK 正式版リリース |
 
 ---
 
 ## 🌐 ウェブサイト
 
-PyLibKit の公式サイトは [**v0.dev**](https://v0.dev) を利用して構築されました。  
+PyLibKit の公式サイトは [**v0.dev**](https://v0.dev) を利用して構築されました。
 高速なプロトタイピングとインタラクティブ UI により、Swift 開発者のためのビジョンを直感的に伝えます。
+
+## 🛠 オープンソース技術スタック
+
+このプロジェクトは以下のオープンソース技術を使用して構築されています：
+
+### コア技術
+- **[PythonKit](https://github.com/pvieito/PythonKit)** - Swift で Python ランタイムを統合する核心ライブラリ
+- **[v0.dev](https://v0.dev)** - AI 駆動の UI コンポーネント生成とウェブサイトプロトタイピング
+
+### フロントエンドスタック
+- **[Next.js 15](https://nextjs.org)** - React ベースのフルスタック Web フレームワーク
+- **[React 19](https://react.dev)** - ユーザーインターフェースライブラリ
+- **[TypeScript](https://typescriptlang.org)** - 型安全性のための静的型システム
+- **[TailwindCSS](https://tailwindcss.com)** - ユーティリティファーストの CSS フレームワーク
+
+### UI コンポーネント & アニメーション
+- **[Radix UI](https://radix-ui.com)** - アクセシビリティ重視のヘッドレス UI コンポーネント
+- **[Framer Motion](https://framer.com/motion)** - React 用プロダクション グレードモーション ライブラリ
+- **[Lucide React](https://lucide.dev)** - 清潔で一貫性のあるアイコンセット
+
+### 開発ツール
+- **[Geist Font](https://vercel.com/font)** - Vercel が制作したモダンタイポグラフィ
+- **[Swift Package Manager](https://swift.org/package-manager)** - Swift パッケージ依存関係管理
 
 ---
 
