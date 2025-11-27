@@ -162,19 +162,18 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-4">
-          {/* <a
+          <a
             href="/login"
-            className="font-medium transition-colors hover:text-foreground text-muted-foreground text-sm cursor-pointer"
+            className="font-medium relative transition-colors hover:text-foreground text-muted-foreground text-sm cursor-pointer"
           >
             Log In
-          </a> */}
+          </a>
 
           <a
-            // href="/signup"
+            href="/signup"
             className="rounded-md font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] px-4 py-2 text-sm"
           >
-            {/* Sign Up */}
-            Coming Soon
+            Sign Up
           </a>
         </div>
       </header>
@@ -254,18 +253,17 @@ export default function Home() {
                 FAQ
               </button>
               <div className="border-t border-border/50 pt-4 mt-4 flex flex-col space-y-3">
-                {/* <a
+                <a
                   href="/login"
                   className="px-4 py-3 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-background/50 cursor-pointer"
                 >
                   Log In
-                </a> */}
+                </a>
                 <a
-                  // href="/signup"
+                  href="/signup"
                   className="px-4 py-3 text-lg font-bold text-center bg-gradient-to-b from-primary to-primary/80 text-primary-foreground rounded-lg shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  {/* Sign Up */}
-                  Coming Soon
+                  Sign Up
                 </a>
               </div>
             </nav>

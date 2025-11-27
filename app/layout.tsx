@@ -4,6 +4,8 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import { PostHogProvider } from "../components/PostHogProvider"
+import { AuthProvider } from "../components/auth/AuthProvider"
+import { Toaster } from "sonner"
 
 export const metadata: Metadata = {
   title: "PyLibKit - Swift ↔ Python Integration for iOS & macOS",
@@ -55,7 +57,14 @@ html {
       </head>
       <body className="dark">
         <PostHogProvider>
-          {children}
+          <AuthProvider>
+            {children}
+            <Toaster
+              theme="dark"
+              position="top-right"
+              richColors
+            />
+          </AuthProvider>
         </PostHogProvider>
       </body>
     </html>
